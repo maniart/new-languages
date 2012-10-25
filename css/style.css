@@ -1,0 +1,528 @@
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+ul{
+	list-style-type: none;
+}
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 116px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 72px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 44px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body {
+	font: 17px/24px Palatino, Constantia, "Palatino Linotype", serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(69,255,144);}
+::-moz-selection 	{background: rgb(69,255,144);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(69,255,144);}
+
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+
+/* font weights: 300, 400, 700, 900 font-family: 'Lato', sans-serif; */
+ 
+    
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+html { 
+	/*background: url('../img/bg.jpg') no-repeat center center fixed;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 101%;
+	background: rgba(0,0,0,1);
+}
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	/*width: 896px;*/
+	width:100%;
+	float: left;
+	padding: /*72px*/ 0px /*48px 84px*/;
+	color: rgb(255,255,255);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+iframe#ustream{
+	position: fixed;
+	z-index: -100;
+	left: 0;
+	top:0;
+}
+hr{
+	border-bottom:2px solid black;
+	margin-bottom: 8px;
+
+}
+a { color: rgba(30,30,30,1);}
+a:visited{ color: rgba(80,80,80,1); }
+a:hover, a:focus { color: rgba(50,50,50,1); text-decoration: none;}
+.greenBg{
+	background-color: rgba(69,255,144,1)!important;
+}
+ul{
+	9st-style-type: none;
+}
+h1,h2,h3,h4,h5,h6{ 
+	text-transform: uppercase;
+}
+#welcome{
+	width: 620px;
+	background: url('../img/logo-welcome.png') center top no-repeat transparent;
+	margin: 8% auto 0 auto;
+	padding: 270px 0 0 0;
+	position: relative;
+	display: none;
+
+}
+#welcome h1{ font-weight: 700;  }
+#welcome h2{ font-weight: 100; font-size: 59px;  }
+#welcome h3{ font-weight: 300; font-size: 24px; display: inline; margin-left: 5px;}
+#welcome h4{ font-weight: 900; font-size: 18px; display: inline; float: right; margin-right: 18px; line-height: 40px;   }
+#welcome h2>span{ font-weight: 300; }
+#welcome ul.sponsors{
+	float: left;
+}
+#welcome ul.sponsors li{
+	float: left;
+	margin: 0 5px 0 0;
+	height: 15px;
+	padding: 2px;
+	background-color: rgba(255,255,255,1);
+	background-position: 2px 2px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+li.eyebeamLogo{ 
+	background-image: url('../img/eyebeam-logo.png');
+	width: 193px;
+}
+li.downtownLogo{ 
+	background-image: url('../img/downtown-logo.png');
+	width: 50px;
+}
+li.espLogo{ 
+	background-image: url('../img/esp-logo.png');
+	width: 45px;
+}
+li.maniartLogo{ 
+	background-image: url('../img/maniart-logo.png');
+	width: 83px;
+}
+#container{
+	display: none;
+	width: 712px;
+	margin: 0 0 0 50px;
+}
+#container>header{
+	padding: 20px 5px 15px 120px;
+	background: url('../img/logo-banner.png') 0 10px no-repeat rgba(0,0,0,1);
+	position: fixed;
+	width: 712px;
+	
+}
+#container header h1{font-size: 30px;line-height: 25px;}
+#container header h2{font-size: 20px; font-weight: 100; margin: 0; line-height: 20px; letter-spacing: 2px;}
+#container header h3{font-size: 12px; font-weight: 300; line-height: 15px; letter-spacing: 1px;}
+#container header h2>span{font-weight: 400;margin-left: 5px;}
+nav#mainNavigation{
+	font-size: 14px;
+	font-weight: 300;
+	margin: 5px 0 0 0;
+}
+nav#mainNavigation li{
+	float: left;
+	margin: 0 6px 0 0;
+	padding: 5px;
+	line-height: 14px;
+	background: rgba(255,255,255,1);
+	color: rgba(0,0,0,1);
+	-webkit-transition: background 300ms ease-in-out;
+	-moz-transition: background 300ms ease-in-out;
+	-ms-transition: background 300ms ease-in-out;
+	-o-transition: background 300ms ease-in-out;
+	transition: background 300ms ease-in-out;
+	cursor: pointer;
+}
+nav#mainNavigation li:hover,
+nav#mainNavigation li:focus{
+	background: rgba(69,255,144,1);
+}
+#contentWrapper{
+	float: left;
+	width: 100%;
+	margin: 120px 0 40px 5px;
+	background: rgba(255,255,255,.7);
+	color: rgba(0,0,0,1);
+	padding: 0px;
+}
+#contentWrapper>header{
+	width: 712px;
+	background: rgba(180,180,180,1);
+	float: left;
+	height: 35px;
+	position: fixed;
+	border-bottom: 2px solid rgba(0,0,0,1);
+}
+#contentWrapper>header>h1{
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	float: left;
+	line-height: 35px;
+	display: inline;
+}
+span.minimize{
+	float: left;
+	width: 20px;
+	height:20px;
+	background: url('../img/minimizeplus.png') 0 0 no-repeat transparent;
+	margin: 8px;
+}
+span.close{
+	float: right;
+	width:20px;
+	height:20px;
+	background: url('../img/close.png') 0 0 no-repeat;
+	margin: 8px;
+}
+#content{
+	padding: 50px 20px 10px 20px;
+	line-height: 26px;
+}
+#content p{
+	margin-bottom: 10px;
+}
+#content img{
+	border: 1px solid rgba(0,0,0,1);
+	padding: 2px;
+	float: left;
+	margin: 0 8px 0px 0;
+}
+#content h1,#content h3,#content h3,#content h4,#content h5,#content h6{
+	color: rgb(69,255,144);
+	font-weight: 300;
+	margin: 0 0 5px 0;
+}
+#rightCol{
+	position: fixed;
+	top:0;
+	right:0;
+	padding: 5px;
+	margin: 5px;
+	height: 90%;
+	z-index: 10;
+	/* WELCOME PAGE */
+	display: none;
+}
+
+article#social{
+	height: 25px;
+}
+article#social ul{
+	float: right;
+	display: none;
+}
+article#social li{
+	padding: 2px;
+	border-radius: 50px;
+	background-color: rgba(255,255,255,1);
+	background-position: center,center;
+	background-repeat: no-repeat;
+	width:20px;
+	height:20px;
+	display: block;
+	float: left;
+	margin: 0 0 0 3px;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+	opacity: 1;
+}
+article#social li:hover,
+article#social li:focus{
+	background-color: rgba(69,255,144,1)!important;
+}
+li.facebook{background-image: url('../img/social/facebook.png'); }
+li.twitter{background-image: url('../img/social/twitter.png'); }
+li.youtube{background-image: url('../img/social/youtube.png'); }
+li.vimeo{background-image: url('../img/social/vimeo.png'); }
+div#socialTrigger{
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 12px;
+	color: rgba(0,0,0,1);
+	float: right;
+	height: 20px;
+	background: #999;
+	margin: 0 0 0 5px;
+}
+span.triggerTxt{
+	background: rgba(255,255,255,1);
+	float: left;
+	height: 20px;
+	padding: 2px 2px 2px 4px;
+	border-left: 2px solid rgba(0,0,0,1);
+}
+span.triggerIcon{
+	background: url('../img/minimizeplus-small.png') -16px center no-repeat rgba(69,255,144,1);
+	float: left;
+	width: 10px;
+	padding: 0 4px;
+	height: 24px;
+	
+}
+article#nowPlaying{
+	float: right;
+	margin: 20px 0 0 0;
+	font-size: 14px;
+	font-weight: 300;
+}
+article#nowPlaying h3, #sponsors h4{
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,1);
+	margin: 0 0 5px 0;
+	font-weight: 300;
+	padding: 0 0 1px 0;
+	font-size: 16px;
+	line-height: 1em;
+	float: right;
+		
+}
+ul#artistList{
+	color: rgba(0,0,0,1);
+	float: right;
+	text-align: right;
+	clear: both;
+}
+
+
+ul#artistList li{
+	margin: 0 0 3px 0;
+	line-height: 1.2em;
+	height: 17px;
+}
+ul#artistList li>span{
+	padding: 0 18px 0 2px;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	background: url('../img/nowplaying-arrow.png') 95% 4px no-repeat  rgba(255,255,255,1);
+
+}
+ul#artistList li>span:hover{
+	background-color: rgba(69,255,144,1);
+}
+h3#donate{
+	font-weight: 300;	
+	font-size: 14px;
+	float: right;
+	clear: both;
+}
+h3#donate>a{
+	text-decoration: none;
+	color:rgba(69,255,144,1);
+}
+#sponsors{
+	position: absolute;
+	bottom: 0;
+	right:0;
+}
+#sponsors ul{
+	width: 120px;
+	float: right;
+	clear: both;
+}
+#sponsors h4{
+	font-size: .78em;
+	clear:both;
+	float: right;
+}
+#sponsors li{
+	background-color: rgba(255,255,255,1);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding: 1px;
+	width:100%;
+	margin: 0 0 2px 0;
+}
+.maniartLogoSmall{
+	text-indent: -9999px;
+	background-image: url('../img/');
+}
+.eyebeamLogoSmall{
+	text-indent: -9999px;
+	height: 8px;
+	background-image: url('../img/sponsors/eyebeam-logo-small.png');
+}
+.espLogoSmall{
+	text-indent: -9999px;
+	height: 40px;
+	background: url('../img/sponsors/esp-logo-small.png');	
+}
+.downtownLogoSmall{
+	text-indent: -9999px;
+	width: 200px;
+	height: 35px;
+	background: url('../img/sponsors/downtown-logo-small.png');
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
+	}
+	
+}
