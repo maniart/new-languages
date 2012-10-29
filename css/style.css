@@ -60,7 +60,7 @@ ul{
 }
 
 body {
-	font: 17px/24px Palatino, Constantia, "Palatino Linotype", serif;
+	font: 14px/24px Palatino, Constantia, "Palatino Linotype", serif;
 }
 
 .small, small {
@@ -120,7 +120,8 @@ html {
 	background: rgba(0,0,0,1);
 }
 body {
-	font-family: 'Lato', sans-serif;
+/*	font-family: 'Lato', sans-serif;*/
+	font-family: "lucida grande",arial,lucida,tahoma,helvetica,arial,sans-serif !important;
 	font-weight: 300;
 	/*width: 896px;*/
 	width:100%;
@@ -159,7 +160,7 @@ h1,h2,h3,h4,h5,h6{
 	padding: 270px 0 0 0;
 	position: relative;
 	display: none;
-
+	font-family: lato;
 }
 #welcome h1{ font-weight: 700;  }
 #welcome h2{ font-weight: 100; font-size: 59px;  }
@@ -202,25 +203,25 @@ li.maniartLogo{
 }
 #container>header{
 	padding: 20px 5px 15px 120px;
-	background: url('../img/logo-banner.png') 0 10px no-repeat rgba(0,0,0,1);
+	background: url('../img/logo-banner.png') 0px 0px no-repeat rgba(0,0,0,1);
 	position: fixed;
 	width: 712px;
 	
 }
-#container header h1{font-size: 30px;line-height: 25px;}
-#container header h2{font-size: 20px; font-weight: 100; margin: 0; line-height: 20px; letter-spacing: 2px;}
+#container header h1{font-size: 30px;line-height: 25px;font-family: lato;}
+#container header h2{font-size: 20px; font-weight: 100; margin: 0; line-height: 20px; letter-spacing: 2px;font-family: lato;}
 #container header h3{font-size: 12px; font-weight: 300; line-height: 15px; letter-spacing: 1px;}
 #container header h2>span{font-weight: 400;margin-left: 5px;}
 nav#mainNavigation{
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 300;
 	margin: 5px 0 0 0;
 }
 nav#mainNavigation li{
 	float: left;
-	margin: 0 6px 0 0;
-	padding: 5px;
-	line-height: 14px;
+	margin: 0 8px 0 0;
+	padding: 5px 6px;
+	line-height: 13px;
 	background: rgba(255,255,255,1);
 	color: rgba(0,0,0,1);
 	-webkit-transition: background 300ms ease-in-out;
@@ -274,7 +275,7 @@ span.close{
 }
 #content{
 	padding: 50px 20px 10px 20px;
-	line-height: 26px;
+	line-height: 1.4em;
 }
 #content p{
 	margin-bottom: 10px;
@@ -283,7 +284,7 @@ span.close{
 	border: 1px solid rgba(0,0,0,1);
 	padding: 2px;
 	float: left;
-	margin: 0 8px 0px 0;
+	margin: 0 8px 10px 0;
 }
 #content h1,#content h3,#content h3,#content h4,#content h5,#content h6{
 	color: rgb(69,255,144);
@@ -429,7 +430,7 @@ h3#donate>a{
 	float: right;
 }
 #sponsors li{
-	background-color: rgba(255,255,255,1);
+	background-color: transparent;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	padding: 1px;
